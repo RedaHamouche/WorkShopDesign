@@ -12,4 +12,6 @@
   width: 100%;
 }
 .label {
+  @include headline-5;
+  color: $color-mono-gray-3;
 }

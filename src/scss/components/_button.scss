@@ -1,3 +1,47 @@
-.test {
-    color: red;
+$layout-breakpoint-small: 960px;
+
+.btn {
+  background-color: $color-cta-colors-primary;
+  @include justifyCenter;
+  @include headline-5;
+
+  &-primary {
+    background-color: $color-cta-colors-primary;
+    color: $color-mono-white;
+    @include hocus() {
+      background: $transparent-color;
+      color: $color-cta-colors-primary;
+      border: 1px solid $color-cta-colors-primary;
+    }
+  }
+
+  &-secondary {
+    background-color: $color-cta-colors-secondary;
+    color: $color-mono-white;
+    @include hocus() {
+      background: $transparent-color;
+      color: $color-cta-colors-secondary;
+      border: 1px solid $color-cta-colors-secondary;
+    }
+  }
+
+  &-primary,
+  &-secondary {
+    width: 160px;
+    height: 48px;
+    padding: 15px;
+    border-radius: $btn-radius;
+  }
+}
+
+@media (min-width: $layout-breakpoint-small) {
+  .btn {
+    width: 355px;
+    height: 64px;
+  }
+}
+
+input,
+button {
+  border: none;
 }
