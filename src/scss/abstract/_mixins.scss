@@ -5,3 +5,8 @@
       @content;
     }
   }
+
+  @mixin justifyCenter() {
+   display: flex;
+   justify-content: center;
+  }
