@@ -1,0 +1,46 @@
+.checkbox-container {
+	display: inline-block;
+}
+.checkbox-container label input {
+    display: none;
+}
+
+.checkbox-container label {
+	position: relative;
+
+	cursor: pointer;
+
+	@include flex(false, center);
+	@include headline-p;
+
+    .label {
+        margin-left: 12px;
+    }
+}
+
+.checkbox-container label .checkbox {
+	position: relative;
+
+    @include flex(center, center);
+	@include square(24px);
+    @mixin  hocus {
+        outline: none;
+    }
+
+	background-color: $color-mono-white;
+    border: 1px solid $color-mono-gray-2;
+    border-radius: $checkbox-radius;
+
+}
+
+.checkbox-container label .checkbox svg {
+    display: none;
+}
+
+.checkbox-container label input:checked ~ .checkbox svg {
+    display: block;
+}
+
+.checkbox-container label input:checked ~ .checkbox{
+    background-color: $color-cta-colors-primary;
+}

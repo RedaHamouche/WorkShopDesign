@@ -2,7 +2,19 @@ $layout-breakpoint-small: 960px;
 
 .btn {
   background-color: $color-cta-colors-primary;
-  @include justifyCenter;
+  width: 160px;
+  height: 48px;
+  padding: 15px;
+  border-radius: $btn-radius;
+
+  // TODO: DYNAMIC ANIM CURVES BEZIER
+  transition: all 0.2s ease-in;
+
+  &:hover { 
+    cursor: pointer
+  }
+
+  @include flex(center, center);
   @include headline-5;
 
   &-primary {
@@ -25,13 +37,6 @@ $layout-breakpoint-small: 960px;
     }
   }
 
-  &-primary,
-  &-secondary {
-    width: 160px;
-    height: 48px;
-    padding: 15px;
-    border-radius: $btn-radius;
-  }
 }
 
 @media (min-width: $layout-breakpoint-small) {

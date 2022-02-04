@@ -6,7 +6,20 @@
     }
   }
 
-  @mixin justifyCenter() {
-   display: flex;
-   justify-content: center;
+  @mixin flex($justify: center, $align: center) {
+    display: flex;
+
+    @if $justify == center {
+      justify-content: center;
+    }
+
+    @if $align == center {
+      align-items: center;
+    }
+  }
+
+
+  @mixin square($size) {
+    width: $size;
+    height: $size;
   }
