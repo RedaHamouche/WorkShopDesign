@@ -1,0 +1,30 @@
+$layout-breakpoint-small: 960px;
+
+.btn-primary {
+  @include hocus() {
+    background: $transparent-color;
+    color: $color-cta-colors-primary;
+    border: 1px solid $color-cta-colors-primary;
+  }
+
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  width: 159px;
+  height: 48px;
+  background: $color-cta-colors-primary;
+  color: $color-mono-white;
+  border-radius: $btn-radius;
+  @include headline-5;
+}
+@media (min-width: $layout-breakpoint-small) {
+    .btn-primary {      
+        width: 355px;
+        height: 64px;
+      }
+}
+
+input,
+button {
+  border: none;
+}
