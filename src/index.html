@@ -9,29 +9,60 @@
     <title>WorkShop</title>
   </head>
   <body>
-    <h1 class="test">Hello Workshop</h1>
-
-    <form id="test" class="form">
+    <header class="header"></header>
+ 
+    <!-- <h1 class="test">Hello Workshop</h1> -->
+<main class="container">
+  <form id="test" class="form">
+    <div class="form-content">
       <div class="title">
         <p class="title-content">Sign Up</p>
       </div>
       <div class="input-group">
-        <p class="input-content">
-          <label class="label">Username</label>
-          <input class="input"  placeholder="Placeholder" value="hello"/>
-        </p>
-        <p class="input-content">
-          <label class="label">Password</label>
-          <input class="input" placeholder="Placeholder" ></input>
-        </p>
+        <div class="form-item">
+          <label for="email">Email</label>
+          <input type="email" name="email" required="required" placeholder="Email Address"></input>
+        </div>
+        <div class="form-item">
+          <label for="email">Password</label>
+          <input type="password" name="password" required="required" placeholder="Password"></input>
+        </div>
       </div>
-      <div>
-        <button type="checkbox" />
+      <div class="checkbox-container"> 
+        <label>
+          <input type="checkbox" name="check">
+          <span class="checkbox"><svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 7.5L5.5 11L13.5 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            </span>
+          <span class="label">Remember me</span>
+        </label>
       </div>
-      <div>
-        <button></button>
-        <link />
+      <div class="btn-group">
+        <button class="btn btn-primary">signIn</button>
+        <button class="btn btn-primary">signUp</button>
       </div>
-    </form>
+    <div>
+   
+  </form>
+</main>
+    
+   
+    <!-- <button class="btn btn-primary">Hello</button>
+    <div class="checkbox-container"> 
+			<label>
+				<input type="checkbox" name="check">
+				<span class="checkbox"><svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 7.5L5.5 11L13.5 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          </span>
+				<span class="label">Remember me</span>
+			</label>
+		</div>
+
+    <div class="form-item">
+      <label for="email">Label</label>
+      <input type="email" name="email" required="required" placeholder="Email Address"></input>
+    </div> -->
   </body>
 </html>
