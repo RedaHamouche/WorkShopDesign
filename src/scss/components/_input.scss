@@ -1,0 +1,38 @@
+.form-item {
+  width: 100%;
+  @include flex(none, none, column);
+}
+
+
+.form-item {
+    label, input {
+        color: $color-mono-gray-3;
+
+        &::placeholder {
+            color: $color-mono-gray-3;
+        }
+    }
+}
+.form-item input {
+  height: $input-height;
+  width: $input-width;
+  border-radius: $btn-radius;
+
+  margin-top: $spacing-input;
+  padding-left: $spacing-m;
+
+  transition: border-color 0.3s;
+  background-color: $color-cta-colors-tercary;
+
+  @include headline-5;
+
+  @include hocus {
+    border: 1px solid $color-cta-colors-primary;
+    outline: $color-cta-colors-primary;
+  }
+  &:active, ::selection {
+    box-shadow: $input-shadow;
+  }
+}
+
+

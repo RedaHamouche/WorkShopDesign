@@ -1,3 +1,50 @@
+// LIST OF MIXINS: 
+//        screen
+//        hocus
+//        flex
+//        square
+//        padding
+
+
+
+// BREAKPOINTS
+
+$breakpoint-small: 600px;
+$breakpoint-med-small: 960px;
+$breakpoint-med: 1175px;
+
+@mixin screen($size, $type: max, $pixels: $breakpoint-small) {
+  @if $size == 'small' {
+    @media screen and ($type + -width: $breakpoint-small) {
+        @content;
+    }
+  }
+  @else if $size == 'med-small' {
+    @media screen and ($type + -width: $breakpoint-med-small) {
+        @content;
+    }
+  }
+  @else if $size == 'med' {
+    @media screen and ($type + -width: $breakpoint-med) {
+        @content;
+    }
+  }
+ @else if $size == 'large' {
+    @media screen and ($type + -width: $breakpoint-med) {
+        @content;
+    }
+  }
+  @else if $size == 'custom' {
+    @media screen and ($type + -width: $pixels + px) {
+     @content;
+    }
+  }
+  @else {
+    @content;
+  }
+}
+
+
 /*Media query mixin*/
 @mixin hocus() {
     &:hover,
@@ -6,8 +53,12 @@
     }
   }
 
-  @mixin flex($justify: center, $align: center) {
-    display: flex;
+  @mixin flex($justify: center, $align: center, $direction: row) {
+    display:-webkit-box; // old
+    display:-moz-box; // old
+    display:-ms-flexbox; // ie
+    display:-webkit-flex; // new
+    display:flex; // new
 
     @if $justify == center {
       justify-content: center;
@@ -16,6 +67,9 @@
     @if $align == center {
       align-items: center;
     }
+    @if $direction == column {
+      flex-direction: column;
+    }
   }
 
 
@@ -23,3 +77,19 @@
     width: $size;
     height: $size;
   }
+
+  //Padding mixin
+@mixin padding($top, $right, $bottom, $left) {
+  @if $top != 0 {
+  padding-top: $top;
+  }
+  @if $right != 0 {
+    padding-right: $right;
+  }
+  @if $bottom != 0 {
+    padding-bottom: $bottom; 
+  }
+  @if $left != 0 { 
+    padding-left: $left;
+  }
+}
