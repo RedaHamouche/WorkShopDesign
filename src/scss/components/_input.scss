@@ -1,15 +1,28 @@
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.input-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.label {
+  margin-bottom: 3px;
+}
 .input {
-  max-width: 350px;
-  height: 56px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  margin: 54px 0px;
+  width: 350px;
+  font-size: 24px;
+  line-height: 24px;
+  padding: 17px 24px 14px 24px;
   border-radius: 8px;
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
   background-color: $color-cta-colors-tercary;
+  &::placeholder {
+    color: $color-mono-gray-3;
+    @include headline-4;
+  }
+  &::active {
+    border-color: $color-cta-colors-primary;
+  }
 }
