@@ -1,5 +1,3 @@
-$layout-breakpoint-small: 960px;
-
 .btn-group {
     margin-top: $spacing-xl;
     @include screen("med", min){
@@ -12,6 +10,7 @@ $layout-breakpoint-small: 960px;
     }
   }
 }
+
 .btn {
   background-color: $color-cta-colors-primary;
   min-width: 160px;
