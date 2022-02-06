@@ -1,66 +1,24 @@
-.input-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-}
-.input-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.label {
-  margin-bottom: 3px;
-}
-.input {
-  width: 350px;
-  font-size: 24px;
-  line-height: 24px;
-  padding: 17px 24px 14px 24px;
-  border-radius: 8px;
-  background-color: $color-cta-colors-tercary;
-  &::placeholder {
-    color: $color-mono-gray-3;
-    @include headline-4;
-  }
-  &::active {
-    border-color: $color-cta-colors-primary;
-  }
-}
-.form-item {
-  width: 100%;
-  @include flex(none, none, column);
-}
 
-.form-item {
-  label,
-  input {
-    color: $color-mono-gray-3;
-
-    &::placeholder {
-      color: $color-mono-gray-3;
+  .input {
+    height: $input-height;
+    border-radius: $radius-m;
+  
+    padding-left: $spacing-m;
+  
+    transition: border-color 0.3s;
+    background-color: $color-cta-colors-tercary;
+  
+    @include headline-5;
+    color: $color-mono-black;
+  
+    @include hocus {
+      border: 1px solid $color-cta-colors-primary;
+      outline: $color-cta-colors-primary;
+    }
+    &:active,
+    ::selection {
+      box-shadow: $input-shadow;
     }
   }
-}
-.form-item input {
-  height: $input-height;
-  width: $input-width;
-  border-radius: $btn-radius;
 
-  margin-top: $spacing-input;
-  padding-left: $spacing-m;
 
-  transition: border-color 0.3s;
-  background-color: $color-cta-colors-tercary;
-
-  @include headline-5;
-
-  @include hocus {
-    border: 1px solid $color-cta-colors-primary;
-    outline: $color-cta-colors-primary;
-  }
-  &:active,
-  ::selection {
-    box-shadow: $input-shadow;
-  }
-}

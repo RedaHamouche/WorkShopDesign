@@ -1,20 +1,30 @@
 $layout-breakpoint-small: 960px;
 
 .btn-group {
-  @include flex(space-between, center, column);
-  width: 100% !important;
-  height: 127px;
+    margin-top: $spacing-xl;
+    @include screen("med", min){
+      margin-top: $spacing-l;
+    }
+  .btn {
+    &:nth-child(2) {
+      margin-top: $spacing-xl;
+      text-decoration: underline;
+    }
+  }
 }
 .btn {
   background-color: $color-cta-colors-primary;
   min-width: 160px;
   width: 100%;
   height: 48px;
-  padding: 15px;
-  border-radius: $btn-radius;
+  border-radius: $radius-m;
 
   // TODO: DYNAMIC ANIM CURVES BEZIER
   transition: all 0.2s ease-in;
+
+  @include screen("med", min){
+    height: 64px;
+  }
 
   &:hover {
     cursor: pointer;
@@ -44,14 +54,3 @@ $layout-breakpoint-small: 960px;
   }
 }
 
-@media (min-width: $layout-breakpoint-small) {
-  .btn {
-    width: 355px;
-    height: 64px;
-  }
-}
-
-input,
-button {
-  border: none;
-}

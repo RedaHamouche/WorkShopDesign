@@ -1,8 +1,8 @@
 // add class size- 1 to 5
-@for $i from 1 through 5 {
+@for $i from 1 through 10 {
     $base: 1;
     $width: $base * $i;
     .size-#{$width} { 
-        width: $width * 70px;
+        width: $width * 35px;
     }
 }
