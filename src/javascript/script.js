@@ -1,6 +1,6 @@
 const inputPassword = document.querySelector(".input[type=password]");
 
-const succesSvg = document.querySelector(".input[type=password] ~ span")
+const succesSvg = document.querySelector(".input[type=password] ~ img")
 
 
 let timer;              // Timer identifier

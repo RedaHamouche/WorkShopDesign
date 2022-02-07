@@ -48,7 +48,7 @@
       @include headline-5;
     }
 
-    input[type="password"] ~ span {
+    input[type="password"] ~ img {
         display: none;
         position: absolute;
         bottom: 15px;
